@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  shopify:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shopify-php-fpm
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "35729:9000"
